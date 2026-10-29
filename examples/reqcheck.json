@@ -1,0 +1,35 @@
+{
+  "name": "API demo ReqCheck",
+  "baseUrl": "http://127.0.0.1:8787",
+  "timeoutMs": 3000,
+  "maxResponseBytes": 1048576,
+  "tests": [
+    {
+      "name": "Health check",
+      "url": "/health",
+      "expect": {
+        "status": 200,
+        "headers": { "content-type": "application/json; charset=utf-8" },
+        "json": { "/status": "ok" },
+        "maxDurationMs": 2000
+      }
+    },
+    {
+      "name": "Daftar pengguna",
+      "url": "/users",
+      "expect": { "status": 200, "json": { "/users/0/name": "Alfath", "/total": 1 } }
+    },
+    {
+      "name": "POST JSON",
+      "url": "/echo",
+      "method": "POST",
+      "json": { "pesan": "Halo dari ReqCheck", "aktif": true },
+      "expect": { "status": 201, "json": { "/received/pesan": "Halo dari ReqCheck", "/received/aktif": true } }
+    },
+    {
+      "name": "Rute tidak ditemukan",
+      "url": "/tidak-ada",
+      "expect": { "status": 404, "bodyIncludes": "tidak ditemukan" }
+    }
+  ]
+}

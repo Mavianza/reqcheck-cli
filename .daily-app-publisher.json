@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "request_date": "2026-10-28",
+  "repository": "reqcheck-cli",
+  "payload_sha256": "81b34593e4a26126be3b63bd5968ae2e1ce24a39c84c34e6699b120a8b58446c",
+  "source_repository": "Mavianza/daily-app-publisher",
+  "source_commit": "bef02dcd735cf9b12430ea7e2dcc60b84fa0dd12",
+  "published_at": "2026-10-29T07:20:50.505985+00:00"
+}

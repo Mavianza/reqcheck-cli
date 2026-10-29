@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "name": "API demo ReqCheck",
+  "startedAt": "2026-10-27T17:38:10.204Z",
+  "finishedAt": "2026-10-27T17:38:10.234Z",
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "durationMs": 29
+  },
+  "results": [
+    {
+      "name": "Health check",
+      "method": "GET",
+      "url": "http://127.0.0.1:8787/health",
+      "status": 200,
+      "durationMs": 19,
+      "passed": true,
+      "checks": [
+        {
+          "type": "status",
+          "passed": true,
+          "message": "Status HTTP sesuai daftar yang diharapkan."
+        },
+        {
+          "type": "header",
+          "passed": true,
+          "message": "Header \"content-type\" cocok."
+        },
+        {
+          "type": "json",
+          "passed": true,
+          "message": "Nilai JSON pada \"/status\" cocok."
+        },
+        {
+          "type": "duration",
+          "passed": true,
+          "message": "Durasi menerima seluruh respons memenuhi batas."
+        }
+      ]
+    },
+    {
+      "name": "Daftar pengguna",
+      "method": "GET",
+      "url": "http://127.0.0.1:8787/users",
+      "status": 200,
+      "durationMs": 4,
+      "passed": true,
+      "checks": [
+        {
+          "type": "status",
+          "passed": true,
+          "message": "Status HTTP sesuai daftar yang diharapkan."
+        },
+        {
+          "type": "json",
+          "passed": true,
+          "message": "Nilai JSON pada \"/users/0/name\" cocok."
+        },
+        {
+          "type": "json",
+          "passed": true,
+          "message": "Nilai JSON pada \"/total\" cocok."
+        }
+      ]
+    },
+    {
+      "name": "POST JSON",
+      "method": "POST",
+      "url": "http://127.0.0.1:8787/echo",
+      "status": 201,
+      "durationMs": 5,
+      "passed": true,
+      "checks": [
+        {
+          "type": "status",
+          "passed": true,
+          "message": "Status HTTP sesuai daftar yang diharapkan."
+        },
+        {
+          "type": "json",
+          "passed": true,
+          "message": "Nilai JSON pada \"/received/pesan\" cocok."
+        },
+        {
+          "type": "json",
+          "passed": true,
+          "message": "Nilai JSON pada \"/received/aktif\" cocok."
+        }
+      ]
+    },
+    {
+      "name": "Rute tidak ditemukan",
+      "method": "GET",
+      "url": "http://127.0.0.1:8787/tidak-ada",
+      "status": 404,
+      "durationMs": 1,
+      "passed": true,
+      "checks": [
+        {
+          "type": "status",
+          "passed": true,
+          "message": "Status HTTP sesuai daftar yang diharapkan."
+        },
+        {
+          "type": "text",
+          "passed": true,
+          "message": "Respons mengandung teks yang diharapkan."
+        }
+      ]
+    }
+  ]
+}

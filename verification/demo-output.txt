@@ -1,0 +1,6 @@
+API demo ReqCheck
+[LULUS] Health check (HTTP 200, 19 ms)
+[LULUS] Daftar pengguna (HTTP 200, 4 ms)
+[LULUS] POST JSON (HTTP 201, 5 ms)
+[LULUS] Rute tidak ditemukan (HTTP 404, 1 ms)
+4/4 lulus; 0 gagal. Durasi 29 ms.

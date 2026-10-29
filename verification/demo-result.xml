@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="API demo ReqCheck" tests="4" failures="0" errors="0" skipped="0" time="0.029" timestamp="2026-10-27T17:38:10.204Z">
+  <testcase name="Health check" classname="ReqCheck" time="0.019">
+  </testcase>
+  <testcase name="Daftar pengguna" classname="ReqCheck" time="0.004">
+  </testcase>
+  <testcase name="POST JSON" classname="ReqCheck" time="0.005">
+  </testcase>
+  <testcase name="Rute tidak ditemukan" classname="ReqCheck" time="0.001">
+  </testcase>
+</testsuite>

@@ -1,0 +1,41 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> reqcheck-cli@1.0.0 test
+> node --test test/config.test.js test/runner.test.js test/cli.test.js test/reporters.test.js
+
+✔ CLI bantuan dan versi tersedia tanpa konfigurasi (141.452161ms)
+✔ init membuat konfigurasi lengkap dan menolak menimpa berkas (129.402228ms)
+✔ CLI menguji API nyata dan menyimpan laporan JSON serta JUnit (98.652393ms)
+✔ kegagalan API memberi exit code 1 dan laporan tetap tersimpan (94.236448ms)
+✔ konfigurasi invalid tidak mengirim permintaan apa pun (66.587194ms)
+✔ laporan tidak dapat menimpa konfigurasi atau satu sama lain (130.250462ms)
+✔ argumen invalid dan berkas hilang memberi exit code 2 (350.979531ms)
+✔ gagal menulis laporan memberi exit code 2 setelah tes terlaksana (85.066924ms)
+✔ URL relatif dan default dinormalisasi sebelum eksekusi (1.503338ms)
+✔ variabel lingkungan pada URL dan header diekspansi tanpa mengubah body JSON (0.787678ms)
+✔ variabel yang hilang ditolak tanpa mencetak nilai rahasia (0.641417ms)
+✔ nilai env dipakai literal dan karakter kontrol pada URL ditolak (0.24527ms)
+✔ kesalahan skema, typo, dan kelompok pemeriksaan kosong ditolak (0.568538ms)
+✔ URL non-HTTP, kredensial URL, dan fragmen ditolak (0.287774ms)
+✔ header duplikat, CRLF dari env, dan header transport ditolak (0.352111ms)
+✔ pembaca konfigurasi menangani BOM, JSON rusak, ukuran, dan berkas hilang (13.046697ms)
+✔ JUnit melakukan escape nama dan pesan yang mengandung XML (1.185208ms)
+✔ laporan mengganti berkas utuh tanpa menyisakan berkas sementara (9.810075ms)
+✔ HTTP nyata: status, header, teks, JSON Pointer, dan durasi dapat lulus (30.932741ms)
+✔ POST JSON dan header benar-benar diterima server (13.007718ms)
+✔ pemeriksaan gagal tidak menghentikan tes berikutnya dan tidak membocorkan body (11.115173ms)
+✔ JSON Pointer akar mendukung null dan tidak membaca properti prototype (4.795913ms)
+✔ respons bukan JSON menjadi kegagalan terlapor (3.187508ms)
+✔ timeout berlaku sampai seluruh body selesai (83.25405ms)
+✔ batas ukuran respons berlaku untuk stream tanpa content-length (4.766889ms)
+✔ koneksi putus tercatat sebagai NETWORK_ERROR (2.666872ms)
+✔ redirect tidak diikuti dan HEAD tidak membutuhkan body (4.317181ms)
+✔ batas durasi menggunakan waktu menerima body, bukan hanya header (83.133998ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1175.19335

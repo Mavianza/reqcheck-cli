@@ -1,0 +1,15 @@
+{
+  "name": "reqcheck-cli",
+  "version": "1.0.0",
+  "description": "Penguji API HTTP berbasis konfigurasi JSON tanpa dependensi eksternal",
+  "type": "module",
+  "private": true,
+  "bin": { "reqcheck": "bin/reqcheck.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test test/config.test.js test/runner.test.js test/cli.test.js test/reporters.test.js",
+    "demo": "node examples/demo-server.js",
+    "start": "node bin/reqcheck.js"
+  },
+  "license": "MIT"
+}
